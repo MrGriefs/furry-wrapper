@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"moduleResolution": "node",
+		"outDir": "dist",
+		"declarationDir": "dist/@types",
+		"declaration": true,
+		"alwaysStrict": true,
+		"removeComments": false,
+		"pretty": false,
+		"target": "esnext",
+		"module": "commonjs",
+		"types": ["node"],
+		"lib": [
+			"esnext",
+			"esnext.array",
+			"esnext.asynciterable",
+			"esnext.intl",
+			"esnext.symbol"
+		],
+		"skipDefaultLibCheck": true,
+		"sourceMap": false
+	}
+}

@@ -1,0 +1,29 @@
+{
+  "name": "yiffrewrite",
+  "version": "0.0.1",
+  "description": "A rewrite of hokkqi's furry API wrapper",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "lint": "eslint src",
+    "fix": "eslint src --fix",
+    "build": "npm run lint && tsc",
+    "prepublish": "npm run build",
+    "test": "npm run build && node test.js"
+  },
+  "author": "MrGriefs",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@types/node": "^14.14.35",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.22.0",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}

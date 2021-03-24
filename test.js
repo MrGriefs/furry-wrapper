@@ -1,0 +1,5 @@
+const { E6, Shibe, FurryBot } = require('./dist')
+E6.nsfw().then(r => console.log(r))
+// E6().then(r => console.log(r))
+// E6.sfw().then(r => console.log(r))
+// new FurryBot().then(r => console.log(r))
