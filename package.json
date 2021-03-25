@@ -1,11 +1,11 @@
 {
-  "name": "yiffrewrite",
+  "name": "furry-wrapper",
   "version": "0.0.1",
   "description": "A rewrite of hokkqi's furry API wrapper",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "build/**/*"
+    "dist/**/*"
   ],
   "scripts": {
     "lint": "eslint src",
