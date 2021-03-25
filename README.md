@@ -172,18 +172,18 @@ Sheri(endpoint, options).then(r => console.log(r)) // Returns the response
 
 Additionally, each module allows you to pass in API options to customise your experience a tad more.
 ```javascript
-    var options = {
-        // Allows you to pass in a token through the authorization header
-        token: "OGhZVFNVRms6OGhZVFNVRms=",
-        // The exact same as `token`
-        auth,
-        // Use your own custom user agent. User agent will always default to your Node.js version and OS name if no agent is provided
-        agent: 'My Progamme, contact@example.com',
-        // Allows you to apply your own axios options whenever axios is used.
-        axiosOptions: {
-            // Sets a specific amount of time in milliseconds that axios will wait until the requested server responds.
-            timeout: 1000 
-            // You can find other axios options at https://github.com/axios/axios#request-config
-        }
+var options = {
+    // Allows you to pass in a token through the authorization header
+    token: "OGhZVFNVRms6OGhZVFNVRms=",
+    // The exact same as `token`
+    auth,
+    // Use your own custom user agent. User agent will always default to your Node.js version and OS name if no agent is provided
+    agent: 'My Progamme, contact@example.com',
+    // Allows you to apply your own axios options whenever axios is used.
+    axiosOptions: {
+    // Sets a specific amount of time in milliseconds that axios will wait until the requested server responds.
+    timeout: 1000 
+    // You can find other axios options at https://github.com/axios/axios#request-config
     }
+}
 ```
