@@ -1,4 +1,4 @@
-<h2 align="center">[Yiff](https://npmjs.com/package/yiff) Rewrite</h2>
+<h2 align="center"><a href="https://npmjs.com/package/yiff">Yiff</a> Rewrite</h2>
 
 <p align="center">
 <img alt="Travis (.org)" src="https://img.shields.io/travis/MrGriefs/furry-wrapper">
@@ -6,7 +6,7 @@
 <img alt="node-current" src="https://img.shields.io/node/v/furry-wrapper">
 <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/MrGriefs/furry-wrapper">
 </p>
-<p align="center">A useless repository based on [Hokkqi's furry API wrapper](https://github.com/hokkqi/yiff).</p>
+<p align="center">A useless repository based on <a href="https://github.com/hokkqi/yiff">Hokkqi's furry API wrapper</a>.</p>
 
 ## Table of Contents
   - [Installation](#installation)
