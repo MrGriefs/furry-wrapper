@@ -4,7 +4,7 @@ export type Query = Array<string> | string;
 
 export interface E6Options extends Options {
     noCub?: boolean;
-    overideTags?: string;
+    overrideTags?: string;
 }
 
 async function E6Base(endpoint: string, query?: Query, options?: E6Options): QueryReturns {
@@ -13,8 +13,8 @@ async function E6Base(endpoint: string, query?: Query, options?: E6Options): Que
     const base = new Base(options);
 
     let url: string;
-    if (endpoint === 'e926') url = `https://e926.net/posts.json?limit=1&tags=order:random ${query}` + (options?.overideTags ? ` ${options?.overideTags}` : '')
-    else url = `https://e621.net/posts.json?limit=1&tags=order:random ${query}` + (options?.noCub ? '' : ' -young') + (options?.overideTags ? ` ${options?.overideTags}` : '')
+    if (endpoint === 'e926') url = `https://e926.net/posts.json?limit=1&tags=order:random ${query}` + (options?.overrideTags ? ` ${options?.overrideTags}` : '')
+    else url = `https://e621.net/posts.json?limit=1&tags=order:random ${query}` + (options?.noCub ? '' : ' -young') + (options?.overrideTags ? ` ${options?.overrideTags}` : '')
 
     return await base.query(url, r => r.data?.posts[0]);
 }
