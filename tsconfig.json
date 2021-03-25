@@ -3,8 +3,7 @@
 		"strict": true,
 		"moduleResolution": "node",
 		"outDir": "dist",
-		"declarationDir": "dist/@types",
-		"declaration": true,
+		"declaration": false,
 		"alwaysStrict": true,
 		"removeComments": false,
 		"pretty": false,
@@ -20,5 +19,7 @@
 		],
 		"skipDefaultLibCheck": true,
 		"sourceMap": false
-	}
+	},
+	"include": [ "src/**/*" ],
+	"exclude": [ "node_modules", "dist" ]
 }
