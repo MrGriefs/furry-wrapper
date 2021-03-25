@@ -1,9 +1,9 @@
 {
   "name": "furry-wrapper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A rewrite of hokkqi's furry API wrapper",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "index.d.ts",
   "files": [
     "dist/**/*"
   ],
@@ -25,5 +25,21 @@
   },
   "dependencies": {
     "axios": "^0.21.1"
-  }
+  },
+  "engines": {
+    "node": "^15.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrGriefs/furry-wrapper.git"
+  },
+  "keywords": [
+    "api", "wrapper", "e621",
+    "e926", "image", "furry",
+    "axios", "javascript"
+  ],
+  "bugs": {
+    "url": "https://github.com/MrGriefs/furry-wrapper/issues"
+  },
+  "homepage": "https://github.com/MrGriefs/furry-wrapper#readme"
 }
