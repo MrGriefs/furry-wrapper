@@ -12,7 +12,7 @@ interface BundleOptions {
     default?: (name: string) => Function;
 }
 
-export type QueryReturns = Promise<Record<string, unknown>|Error|null>;
+export type APIResponse = Promise<Record<string, unknown>|Error|null>;
 
 export default class Base {
     options: Options;
@@ -30,11 +30,12 @@ export default class Base {
         return this.options.agent || Base.defaultAgent;
     }
 
-    async query(url: string, cb?: ((r: AxiosResponse) => Promise<Record<string, unknown>>)): QueryReturns {
+    async query(url: string, cb?: ((r: AxiosResponse) => Promise<Record<string, unknown>>)): APIResponse {
         if (!cb) cb = r => r.data;
         const ops: AxiosRequestConfig = this.options?.axiosOptions || {};
         if (!ops.headers) ops.headers = {}
         ops.headers['User-Agent'] = this.options?.agent || Base.defaultAgent
+        if (!ops.timeout) ops.timeout = 10000;
         if (this.token) ops.headers['Authorization'] = `Bearer ${this.token}`
         return await axios.get(url, ops)
             .then(cb)
@@ -42,10 +43,10 @@ export default class Base {
     }
     
     /* eslint-disable @typescript-eslint/ban-types */
-    static bundle(base: Function, items: Record<string, string>, options?: BundleOptions): (options?: Options) => QueryReturns {
+    static bundle(base: Function, items: Record<string, string>, options?: BundleOptions): (options?: Options) => APIResponse {
         const bundler: Record<string, Record<string, Function>> = {};
         Object.keys(items).forEach((name) => {
-            bundler[name] = { value: options?.default ? options.default(items[name]) : (async function (options?: Options): QueryReturns {
+            bundler[name] = { value: options?.default ? options.default(items[name]) : (async function (options?: Options): APIResponse {
                 return await base(items[name], options)
             }) }
         })

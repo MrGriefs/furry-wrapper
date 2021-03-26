@@ -1,6 +1,6 @@
-import Base, { Options, QueryReturns } from './Base';
+import Base, { Options, APIResponse } from './Base';
 
-async function FBBase(endpoint: string, options?: Options): QueryReturns {
+async function FBBase(endpoint: string, options?: Options): APIResponse {
     const base = new Base(options);
 
     return await base.query(`https://yiff.rest/v2/${endpoint}?limit=1`, (r => r.data?.images[0]));
@@ -34,22 +34,12 @@ class Container {
 
 // I'm too lazy to do these automatically
 
-/**
- * 
- * @param options - Library options
- * @returns - A random (sfw) image
- */
-async function FB(options?: Options): QueryReturns {
+async function FB(options?: Options): APIResponse {
     const props = Object.keys(Container.valid).slice(0, 16)
     return await FBBase(props[Math.floor(props.length * Math.random())], options)
 }
 
-/**
- * 
- * @param options - Library options
- * @returns - A random animal image
- */
-async function FBAnimals(options?: Options): QueryReturns {
+async function FBAnimals(options?: Options): APIResponse {
     const props = Object.keys(Container.valid).slice(0, 16)
     return await FBBase(props[Math.floor(props.length * Math.random())], options)
 }
@@ -59,7 +49,7 @@ async function FBAnimals(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random bird image
  */
-async function FBAnimalsBirb(options?: Options): QueryReturns {
+async function FBAnimalsBirb(options?: Options): APIResponse {
     return await FBBase('animals/birb', options)
 }
 
@@ -68,7 +58,7 @@ async function FBAnimalsBirb(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random blep image
  */
-async function FBAnimalsBlep(options?: Options): QueryReturns {
+async function FBAnimalsBlep(options?: Options): APIResponse {
     return await FBBase('animals/blep', options)
 }
 
@@ -77,7 +67,7 @@ async function FBAnimalsBlep(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random cheeta image
  */
-async function FBAnimalsCheeta(options?: Options): QueryReturns {
+async function FBAnimalsCheeta(options?: Options): APIResponse {
     return await FBBase('animals/cheeta', options)
 }
 
@@ -86,7 +76,7 @@ async function FBAnimalsCheeta(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random fox image
  */
-async function FBAnimalsFox(options?: Options): QueryReturns {
+async function FBAnimalsFox(options?: Options): APIResponse {
     return await FBBase('animals/fox', options)
 }
 
@@ -95,7 +85,7 @@ async function FBAnimalsFox(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random lynx image
  */
-async function FBAnimalsLynx(options?: Options): QueryReturns {
+async function FBAnimalsLynx(options?: Options): APIResponse {
     return await FBBase('animals/lynx', options)
 }
 
@@ -104,16 +94,11 @@ async function FBAnimalsLynx(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random wolf image
  */
-async function FBAnimalsWolf(options?: Options): QueryReturns {
+async function FBAnimalsWolf(options?: Options): APIResponse {
     return await FBBase('animals/wolf', options)
 }
 
-/**
- * 
- * @param options - Library options
- * @returns - A random (sfw) furry image
- */
-async function FBFurry(options?: Options): QueryReturns {
+async function FBFurry(options?: Options): APIResponse {
     const props = Object.keys(Container.valid).slice(6, 16)
     return await FBBase(props[Math.floor(props.length * Math.random())], options)
 }
@@ -123,7 +108,7 @@ async function FBFurry(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random furry boop image
  */
-async function FBFurryBoop(options?: Options): QueryReturns {
+async function FBFurryBoop(options?: Options): APIResponse {
     return await FBBase('furry/boop', options)
 }
 
@@ -132,7 +117,7 @@ async function FBFurryBoop(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random cuddle image
  */
-async function FBFurryCuddle(options?: Options): QueryReturns {
+async function FBFurryCuddle(options?: Options): APIResponse {
     return await FBBase('furry/cuddle', options)
 }
 
@@ -141,7 +126,7 @@ async function FBFurryCuddle(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random furry flop image
  */
-async function FBFurryFlop(options?: Options): QueryReturns {
+async function FBFurryFlop(options?: Options): APIResponse {
     return await FBBase('furry/flop', options)
 }
 
@@ -150,7 +135,7 @@ async function FBFurryFlop(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random fursuit image
  */
-async function FBFurryFursuit(options?: Options): QueryReturns {
+async function FBFurryFursuit(options?: Options): APIResponse {
     return await FBBase('furry/fursuit', options)
 }
 
@@ -159,7 +144,7 @@ async function FBFurryFursuit(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random furry hold image
  */
-async function FBFurryHold(options?: Options): QueryReturns {
+async function FBFurryHold(options?: Options): APIResponse {
     return await FBBase('furry/hold', options)
 }
 
@@ -168,7 +153,7 @@ async function FBFurryHold(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random furry howl image
  */
-async function FBFurryHowl(options?: Options): QueryReturns {
+async function FBFurryHowl(options?: Options): APIResponse {
     return await FBBase('furry/howl', options)
 }
 
@@ -177,7 +162,7 @@ async function FBFurryHowl(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random furry hug image
  */
-async function FBFurryHug(options?: Options): QueryReturns {
+async function FBFurryHug(options?: Options): APIResponse {
     return await FBBase('furry/hug', options)
 }
 
@@ -186,7 +171,7 @@ async function FBFurryHug(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random furry kiss image
  */
-async function FBFurryKiss(options?: Options): QueryReturns {
+async function FBFurryKiss(options?: Options): APIResponse {
     return await FBBase('furry/kiss', options)
 }
 
@@ -195,7 +180,7 @@ async function FBFurryKiss(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random furry lick image
  */
-async function FBFurryLick(options?: Options): QueryReturns {
+async function FBFurryLick(options?: Options): APIResponse {
     return await FBBase('furry/lick', options)
 }
 
@@ -204,7 +189,7 @@ async function FBFurryLick(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random furry propose image
  */
-async function FBFurryPropose(options?: Options): QueryReturns {
+async function FBFurryPropose(options?: Options): APIResponse {
     return await FBBase('furry/propose', options)
 }
 
@@ -213,16 +198,11 @@ async function FBFurryPropose(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random furry bulge image (NSFW)
  */
-async function FBFurryBulge(options?: Options): QueryReturns {
+async function FBFurryBulge(options?: Options): APIResponse {
     return await FBBase('furry/bulge', options)
 }
 
-/**
- * 
- * @param options - Library options
- * @returns - A random yiff image
- */
-async function FBFurryYiff(options?: Options): QueryReturns {
+async function FBFurryYiff(options?: Options): APIResponse {
     const props = Object.keys(Container.valid).slice(3)
     return await FBBase(props[Math.floor(props.length * Math.random())], options)
 }
@@ -232,7 +212,7 @@ async function FBFurryYiff(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random yiff gay image
  */
-async function FBFurryYiffGay(options?: Options): QueryReturns {
+async function FBFurryYiffGay(options?: Options): APIResponse {
     return await FBBase('furry/yiff/gay', options)
 }
 
@@ -241,7 +221,7 @@ async function FBFurryYiffGay(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random yiff straight image
  */
-async function FBFurryYiffStraight(options?: Options): QueryReturns {
+async function FBFurryYiffStraight(options?: Options): APIResponse {
     return await FBBase('furry/yiff/straight', options)
 }
 
@@ -250,7 +230,7 @@ async function FBFurryYiffStraight(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random yiff lesbian image
  */
-async function FBFurryYiffLesbian(options?: Options): QueryReturns {
+async function FBFurryYiffLesbian(options?: Options): APIResponse {
     return await FBBase('furry/yiff/lesbian', options)
 }
 
@@ -259,7 +239,7 @@ async function FBFurryYiffLesbian(options?: Options): QueryReturns {
  * @param options - Library options
  * @returns - A random yiff gynomorph image
  */
-async function FBFurryYiffGynomorph(options?: Options): QueryReturns {
+async function FBFurryYiffGynomorph(options?: Options): APIResponse {
     return await FBBase('furry/yiff/gynomorph', options)
 }
 
@@ -303,4 +283,65 @@ Object.defineProperties(FB, {
     yiff: {value: FBFurryYiff }
 })
 
-export default FB
+interface FBAnimals {
+    /**
+     * 
+     * @param options - Library options
+     * @returns - A random animal image
+     */
+    (options?: Options): APIResponse;
+    bird: typeof FBAnimalsBirb;
+    blep: typeof FBAnimalsBlep;
+    cheeta: typeof FBAnimalsCheeta;
+    fox: typeof FBAnimalsFox;
+    lynx: typeof FBAnimalsLynx;
+    wolf: typeof FBAnimalsWolf;
+}
+
+interface FBFurry {
+    /**
+     * 
+     * @param options - Library options
+     * @returns - A random (sfw) furry image
+     */
+    (options?: Options): APIResponse;
+    yiff: FBYiff;
+    boop: typeof FBFurryBoop;
+    cuddle: typeof FBFurryCuddle;
+    flop: typeof FBFurryFlop;
+    fursuit: typeof FBFurryFursuit;
+    hold: typeof FBFurryHold;
+    howl: typeof FBFurryHowl;
+    hug: typeof FBFurryHug;
+    kiss: typeof FBFurryKiss;
+    lick: typeof FBFurryLick;
+    propose: typeof FBFurryPropose;
+    bulge: typeof FBFurryBulge;
+}
+
+interface FBYiff {
+    /**
+     * 
+     * @param options - Library options
+     * @returns - A random yiff image
+     */
+    (options?: Options): APIResponse;
+    gay: typeof FBFurryYiffGay;
+    straight: typeof FBFurryYiffStraight;
+    lesbian: typeof FBFurryYiffLesbian;
+    gynomorph: typeof FBFurryYiffGynomorph;
+}
+
+export declare interface FB {
+    /**
+     * 
+     * @param options - Library options
+     * @returns - A random (sfw) image
+     */
+    (options?: Options): APIResponse;
+    animals: FBAnimals;
+    furry: FBFurry;
+    yiff: FBYiff;
+}
+
+export default <FB>FB
