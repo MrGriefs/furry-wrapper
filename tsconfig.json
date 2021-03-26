@@ -3,19 +3,18 @@
 		"strict": true,
 		"moduleResolution": "node",
 		"outDir": "dist",
-		"declaration": false,
+		"declaration": true,
 		"alwaysStrict": true,
 		"removeComments": false,
-		"pretty": false,
+		"pretty": true,
+		"resolveJsonModule": false,
 		"target": "esnext",
 		"module": "commonjs",
 		"types": ["node"],
+		"declarationDir": "dist/@types",
 		"lib": [
 			"esnext",
 			"esnext.array",
-			"esnext.asynciterable",
-			"esnext.intl",
-			"esnext.symbol"
 		],
 		"skipDefaultLibCheck": true,
 		"sourceMap": false
