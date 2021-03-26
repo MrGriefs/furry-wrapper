@@ -1,9 +1,9 @@
 {
   "name": "furry-wrapper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A rewrite of hokkqi's furry API wrapper",
   "main": "dist/index.js",
-  "types": "index.d.ts",
+  "types": "dist/@types/index.d.ts",
   "files": [
     "dist/**/*"
   ],
@@ -35,7 +35,7 @@
   },
   "keywords": [
     "api", "wrapper", "e621",
-    "e926", "furry",
+    "e926", "image", "furry",
     "axios", "javascript"
   ],
   "bugs": {
