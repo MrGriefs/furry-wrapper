@@ -12,7 +12,7 @@
     "fix": "eslint src --fix",
     "build": "npm run lint && tsc",
     "prepublish": "npm run build",
-    "test": "npm run build && node test.js"
+    "test": "npm run build"
   },
   "author": "MrGriefs",
   "license": "GPL-3.0",
