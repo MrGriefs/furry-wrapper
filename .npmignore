@@ -1,1 +1,3 @@
-src
+src/
+test/
+test.js
