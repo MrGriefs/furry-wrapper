@@ -5,6 +5,7 @@
 <img alt="David" src="https://img.shields.io/david/MrGriefs/furry-wrapper">
 <img alt="node-current" src="https://img.shields.io/node/v/furry-wrapper">
 <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/MrGriefs/furry-wrapper">
+<a href="https://npm.runkit.com/furry-wrapper" target="_blank"><img alt="RunKit" src="https://img.shields.io/badge/Run-Kit-red"></a>
 </p>
 <p align="center">A useless repository based on <a href="https://github.com/hokkqi/yiff">Hokkqi's furry API wrapper</a>.</p>
 
@@ -31,8 +32,8 @@ $ yarn add furry-wrapper
 
 ## Usage
 
-[Having issues? Ask for support in our Discord server](https://discord.gg/eazpsZNrRk)  
-<a href="https://discord.gg/eazpsZNrRk" target="_blank"><img alt="Discord" src="https://img.shields.io/discord/368557500884189186"></a>
+Try me on [RunKit](https://npm.runkit.com/furry-wrapper)  
+<a href="https://discord.gg/eazpsZNrRk" target="_blank"><img alt="Discord" src="https://img.shields.io/discord/368557500884189186?color=7389D8&labelColor=6A7EC2&logo=discord&logoColor=ffffff"></a>
 
 ### e621 and e926
 
