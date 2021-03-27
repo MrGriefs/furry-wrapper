@@ -14,7 +14,7 @@
     "prepublish": "npm run build",
     "test": "npm run build"
   },
-  "author": "MrGriefs",
+  "author": "Hagen Hyena <hagen@paw.bot>",
   "license": "GPL-3.0",
   "devDependencies": {
     "@types/node": "^14.14.35",
@@ -27,16 +27,16 @@
     "axios": "^0.21.1"
   },
   "engines": {
-    "node": "15.12.0"
+    "node": "^15.12.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MrGriefs/furry-wrapper.git"
   },
   "keywords": [
-    "api", "wrapper", "e621",
-    "e926", "image", "furry",
-    "axios", "javascript"
+    "yiff", "api", "wrapper",
+    "e621", "e926", "image",
+    "furry", "axios", "javascript"
   ],
   "bugs": {
     "url": "https://github.com/MrGriefs/furry-wrapper/issues"
