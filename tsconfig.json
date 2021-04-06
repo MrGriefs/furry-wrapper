@@ -8,14 +8,10 @@
 		"removeComments": false,
 		"pretty": true,
 		"resolveJsonModule": false,
-		"target": "esnext",
+		"target": "es6",
 		"module": "commonjs",
 		"types": ["node"],
 		"declarationDir": "dist/@types",
-		"lib": [
-			"esnext",
-			"esnext.array",
-		],
 		"skipDefaultLibCheck": true,
 		"sourceMap": false
 	},

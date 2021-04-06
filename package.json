@@ -27,7 +27,8 @@
     "axios": "^0.21.1"
   },
   "engines": {
-    "node": "^15.12.0"
+    "node": ">=7.0.0",
+    "npm": "^7.6.3"
   },
   "repository": {
     "type": "git",
