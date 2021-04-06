@@ -1,6 +1,6 @@
 {
   "name": "furry-wrapper",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A rewrite of hokkqi's furry API wrapper",
   "main": "dist/index.js",
   "types": "dist/@types/index.d.ts",
